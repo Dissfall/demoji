@@ -1,0 +1,3 @@
+# vim-filetype: sh
+
+grep -v "#" ./emoji_list | dmenu -i -l 20 -fn Monospace-12 | awk '{print $NF}' | tr -d "\n" | xclip -selection clipboard && notify-send -t 1000 "Copied to clipboard"
